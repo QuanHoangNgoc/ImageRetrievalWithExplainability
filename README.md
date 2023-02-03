@@ -10,6 +10,7 @@ Smart Interative Retrieval of Visual Data <br> via Semantic Understanding
   <img src="assets/Overview_Explainability.png" width="600">
 </p>
 
+Our poster can be found [here](https://drive.google.com/file/d/1SpLPpoa8GPpkXybzHGvj-q4165iUdTjq/view?usp=share_link).
 
 ## Update
 - (10/2022) We achieve First Prize in Student Scientific Research Award(EURÉKA)

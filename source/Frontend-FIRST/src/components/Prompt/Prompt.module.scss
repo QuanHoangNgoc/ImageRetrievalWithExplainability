@@ -1,0 +1,113 @@
+@import "/public/main.scss";
+
+.prompt {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+  bottom: 0;
+
+  .layout {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+
+  .message {
+    font-size: 1.7rem;
+    color: $hover-text-color;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .info {
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 9999;
+    padding: 20px 30px;
+
+    .imageName {
+      width: 450px;
+    }
+
+    ul {
+      position: relative;
+      display: flex;
+      width: 450px;
+
+      // overflow: scroll;
+      .noDisplay {
+        display: none;
+      }
+
+      button {
+        position: absolute;
+        line-height: 0;
+        padding: 5px;
+        background-color: $hover-text-color;
+        border: transparent;
+        font-size: 1.4rem;
+        color: #fff;
+
+        &:hover {
+          background-color: $primary;
+        }
+      }
+
+      .prevBtn {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      .nextBtn {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+
+    .buttons {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-around;
+
+      button {
+        cursor: pointer;
+        font-size: 16px;
+        padding: 8px 15px;
+        border-radius: 12px;
+        border: none;
+        background-color: $hover-text-color;
+        color: #fff;
+      }
+
+      .cancelBtn {
+        background-color: #bdbdbd;
+      }
+    }
+
+    .name {
+      color: $primary;
+    }
+
+    img {
+      display: block;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      width: 450px;
+      height: auto;
+      max-height: 450px;
+      border: #000 solid 1px;
+    }
+  }
+}

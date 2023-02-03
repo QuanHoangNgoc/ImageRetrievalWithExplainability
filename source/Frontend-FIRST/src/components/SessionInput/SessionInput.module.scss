@@ -1,0 +1,81 @@
+@import "/public/main.scss";
+
+
+.sessionWrapper {
+    display: flex;
+}
+
+.inputWrapper {
+    width: 200px;
+    height: 60px;
+    // border-radius: 12px;
+    background-color: $input-background;
+    padding: 0 24px;
+    justify-content: space-between;
+    font-weight: 400;
+    // display: flex;
+    border: transparent;
+    align-items: center;
+    border-radius: 50px;
+    margin-right: 20px;
+
+    &:focus {
+        border: transparent;
+    }
+
+    .inputSession {
+
+        font-size: 20px;
+        line-height: 26px;
+        color: $black;
+        border: none;
+        flex: 1;
+        outline: none;
+        height: 100%;
+        background-color: transparent;
+
+    }
+}
+
+.inputSessionBtn {
+    padding: 0 24px;
+    height: 60px;
+    background-color: $hover-text-color;
+    border-radius: 12px;
+    border: none;
+    color: $light;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary;
+    }
+
+    // input{
+    //     width: 600px;
+    //     height: 40px;
+    //     border-radius: 12px;
+    //     background-color: $input-background;
+    //     padding: 0 24px;
+    //     justify-content: space-between;
+    //     font-weight: 400;
+    //     display: flex;
+    //     align-items: center;
+    //     border-radius: 50px;
+    //     flex: 1;
+
+    //     .input {
+    //       font-size: 15px;
+    //       line-height: 26px;
+    //       color: $black;
+    //       border: none;
+    //       flex: 1;
+    //       outline: none;
+    //       height: 100%;
+    //       background-color: transparent;
+    //     }
+    // }
+
+}

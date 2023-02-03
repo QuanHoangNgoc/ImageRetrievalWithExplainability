@@ -1,0 +1,31 @@
+.viewControl {
+  display: flex;
+  margin: 10px 0px;
+  label {
+    cursor: pointer;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    input {
+      display: none;
+    }
+  }
+  label:hover {
+    border-color: #70b7f9;
+    color: #70b7f9;
+  }
+  .selected {
+    border-color: #70b7f9;
+    color: #70b7f9;
+  }
+}
+
+// .viewControl {
+//   width: 250px;
+
+//   div {
+//     display: flex;
+//     gap: 10px;
+//   }
+// }

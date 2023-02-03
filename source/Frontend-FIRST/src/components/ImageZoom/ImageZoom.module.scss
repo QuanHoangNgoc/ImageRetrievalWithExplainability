@@ -1,0 +1,54 @@
+@import "/public/main.scss";
+
+.zoomContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  background-color: #333;
+  width: 100vw;
+  height: 100vh;
+  img {
+    // position: absolute;
+    width: 800px;
+    height: auto;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+  }
+
+  button {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 100px;
+    padding: 16px;
+    background-color: $hover-text-color;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 24px;
+
+    &:hover {
+      background-color: #32ceff;
+    }
+  }
+
+  .exitFullScreenIcon {
+    position: absolute;
+    fill: #f0f0f0;
+    top: 20px;
+    right: 32px;
+    opacity: 0.5;
+    z-index: 998;
+    background-color: #545454;
+    border-radius: 50%;
+    padding: 8px;
+
+    &:hover {
+      cursor: pointer;
+      fill: #f0f0f0;
+      opacity: 1;
+    }
+  }
+}

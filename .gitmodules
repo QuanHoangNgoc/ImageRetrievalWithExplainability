@@ -1,9 +1,0 @@
-[submodule "FIRST-Server"]
-	path = FIRST-Server
-	url = https://github.com/nhatkhtn/FIRST-Server
-[submodule "VLFormer"]
-	path = VLFormer
-	url = https://github.com/nero1342/VLFormer
-[submodule "front-end-first"]
-	path = front-end-first
-	url = https://github.com/nhatkhtn/front-end-first

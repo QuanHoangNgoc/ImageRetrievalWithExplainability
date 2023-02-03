@@ -1,0 +1,145 @@
+@import "/public/main.scss";
+
+.wrapper {
+  // padding: 0;
+  // margin: 0;
+  // box-sizing: border-box;
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary;
+  background-image: url("../../share/images/bg.png");
+  background-position: center;
+  background-size: cover;
+  transition: all 0.2s;
+  background-repeat: no-repeat;
+  transition: background-position-y 0.6s;
+  transition-delay: 0.7s;
+  overflow-y: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  .contentWrapper {
+    background: $light;
+    padding: 16px;
+    box-shadow: 0 15px 5px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    max-height: fit-content;
+    border-radius: 8px;
+    width: 100vw;
+
+    max-height: 95vh;
+    // transition: width 2s ease-in-out;
+    animation: widthChange 0.6s forwards;
+  }
+
+  .contentWrapperSearched {
+    animation: heightChange 1s forwards;
+  }
+  @keyframes widthChange {
+    from {
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
+  .importWrapper {
+    background: $light;
+    padding: 16px 30px;
+    box-shadow: 0 15px 5px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    border-radius: 8px;
+    max-height: 95vh;
+    width: fit-content;
+  }
+
+  // .showResult {
+
+  // }
+
+  .loadingWrapper {
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 24px;
+    gap: 2rem;
+
+    .filterInputContainer {
+      flex: 1;
+      max-width: 30%;
+      .filterInput {
+        div {
+          input {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.raiseWater {
+  background-position-y: -300px;
+}
+
+@keyframes raiseWaterAnime {
+  from {
+    background-position-y: 1px;
+  }
+
+  to {
+    background-position-y: -300px;
+  }
+}
+
+@keyframes heightChange {
+  from {
+    max-height: calc($text-field-height + $text-field-padding + 60px);
+    // opacity: 0;
+  }
+  to {
+    max-height: 95vh;
+    // opacity: 1;
+  }
+}
+
+//ScrollBar CSS
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0ae;
+
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    color-stop(0.5, rgba(255, 255, 255, 0.2)),
+    color-stop(0.5, transparent),
+    to(transparent)
+  );
+}

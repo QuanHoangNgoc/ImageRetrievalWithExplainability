@@ -1,0 +1,11 @@
+.quantityOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  .quantityOption__input {
+    max-width: 50px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+}

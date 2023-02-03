@@ -1,0 +1,9 @@
+pytorch=1.11
+torchvision
+cudatoolkit=11.3.1
+django
+ftfy
+regex
+tqdm
+django-cors-headers 
+pymilvus

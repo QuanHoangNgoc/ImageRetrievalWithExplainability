@@ -1,0 +1,18 @@
+@import "/public/main.scss";
+
+.itemWrapper {
+  //height: 160px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
+.itemWrapperActive {
+  img {
+    box-shadow: 0 0 0 4px $hover-text-color;
+  }
+}

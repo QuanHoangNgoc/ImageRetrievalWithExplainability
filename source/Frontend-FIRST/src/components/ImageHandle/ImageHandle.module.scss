@@ -1,0 +1,73 @@
+@import "/public/main.scss";
+
+.optionButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  p,
+  span {
+    display: block;
+    padding: 5px 20px;
+    // min-width: 100px;
+    background-color: #32ceff;
+    color: #333;
+
+    border-radius: 0.5em;
+  }
+
+  span {
+    color: #fff;
+  }
+
+  [data-tooltip] {
+    position: relative;
+
+    &::before {
+      background-color: #333;
+      border-radius: 0.5em;
+      top: -20px;
+      z-index: 1000;
+      color: #fff;
+      content: attr(data-tooltip);
+      display: none;
+      left: 0;
+      padding: 8px;
+      position: absolute;
+      white-space: nowrap;
+      z-index: 98;
+      font-size: 10px;
+    }
+
+    &:hover {
+      &::before {
+        display: block;
+      }
+    }
+  }
+
+  .option {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+    line-height: 0;
+    background-color: $hover-text-color;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+
+    &:hover {
+      background-color: #32ceff;
+    }
+  }
+
+  .disabled {
+    // cursor:not-allowed;
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: #bdbdbd;
+    }
+  }
+}

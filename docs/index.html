@@ -30,28 +30,24 @@
 <div class="container">
         <div class="row text-center" style="font-size:38px">
             <div class="col">
-            VLFormer: Visual-Linguistic Transformer for Referring Image Segmentation
+                Smart Interative Retrieval of Visual Data via Semantic Understanding
             </div>
         </div>
 
         <br>
         <div class="row text-center" style="font-size:28px">
             <div class="col">
-            Under review
+            Thesis Project
             </div>
         </div>
         <br>
 
         <div class="h-100 row text-center heavy justify-content-md-center" style="font-size:24px;">
             <div class="col-sm-3">
-                <a href="https://nero1342.github.io/">E-Ro Nguyen<sup>1, 2</sup></a>
+                <a href="https://nero1342.github.io/">E-Ro Nguyen*<sup>1, 2</sup></a>
             </div>
             <div class="col-sm-3">
-                Nhat Hoang-Xuan<sup>1, 2</sup>
-            </div>
-            
-            <div class="col-sm-3">
-                Tam V. Nguyen<sup>3</sup>
+                Nhat Hoang-Xuan*<sup>1, 2</sup>
             </div>
             <div class="col-sm-3">
                 Minh-Triet Tran<sup>1, 2</sup>
@@ -67,19 +63,15 @@
                 2. Viet Nam National University, Ho Chi Minh city, Vietnam
             </div>
             <div>
-                3. University of Dayton, Ohio, U.S.A
+                (*) Equal contribution
             </div>
-            
         </div>    
         <div class="h-100 row text-center justify-content-md-center" style="font-size:20px;">
-            <div class="col-sm-2">
-                <a href="https://arxiv.org/">[arXiv]</a>
-            </div>
             <div class="col-sm-2">
                 <a href="https://arxiv.org/0">[Paper]</a>
             </div>
             <div class="col-sm-2">
-                <a href="https://github.com/nero1342/VLFormer_RIS">[Code]</a>
+                <a href="https://github.com/nero1342/ImageRetrievalWithExplainability">[Code]</a>
             </div>
         </div>
 
@@ -97,9 +89,44 @@
     <div class="row">
         <div class="col">
             <p style="text-align: justify;">
-                The referring image segmentation task aims to segment a referred object from an image using a natural language expression. The query expression in referring image segmentation typically describes the relationship between the target object and others. Therefore, several objects may appear in the expression, and the model must carefully understand the language expression and select the correct object that the expression refers to. In this work, we introduce a unified and simple query-based framework named VLFormer. Concretely, we use a small set of object queries to represent candidate objects and design a mechanism to generate the fine-grained object queries by utilizing language and multi-scale vision information. More specifically, we propose a Visual-Linguistic Transformer Block, which produces a richer representation of the objects by associating visual and linguistic features with the object queries effectively and simultaneously.
-At the same time, we leverage the ability to extract linguistic features from CLIP, which has a great potential for compatibility with visual information.
-Without bells and whistles, our proposed method significantly outperforms the previous state-of-the-art methods by large margins on three referring image segmentation datasets: RefCOCO, RefCOCO+, and G-Ref.
+                Visual data retrieval is crucial task given the ubiquitous amount of visual data
+that is left unattended. One main application is to retrieve images corresponding
+to a description, which is helpful in many situations, such as locating abnormal
+events in surveillance cameras footage or managing a large collection of captured
+photos. Lifelogging is a perfect example, as the lifelogger wants to digitize their
+everyday life, and only detailed analysis of the immense data generated will
+achieve this.
+
+In this thesis, we propose an improved version of FIRST 3.0, a Flexible In-
+teractive Retrieval SysTem that leverages expressive cross-domain embeddings
+
+to enhance the searching process. Specifically, we propose to enrich the image
+representation by incorporating features at different level of details to capture
+both global and fine-grained information. We also introduce a novel feature that
+
+allows users to summarize a long sequence of images to a short one by selec-
+tively keeping key frames, with adjustable granularity. This feature allows users
+
+to quickly review events that happened in a time frame (e.g., a day), which is
+usually impossible due to the disproportionate number of similar looking images
+that contain little to no information. To help users make the most of our system,
+
+we conducted a user study and composed the best practices in utilizing our sys-
+tem based on analysis and our experience. Our system achieves rank 7/16 in the
+
+Lifelog Search Challenge 2022 and 4/9 in the Visual Browser Showdown 2022.
+Heading towards Explainable Retrieval, we propose the addition of a Refer-
+ring Expression Segmentation module to provide an intuitive explanation of
+
+the results. This module is highly compatible with our system as it shares the
+input, at the same time complementing it by pointing out precisely the object
+
+being referred to, consolidating the user’s belief on the results. Our novel Visual-
+Linguistic Transformer Block associates visual and linguistic features with the
+
+object queries to produce a more fine-grained representation of object queries.
+Our method named VLFormer achieves state-of-the-art results across multiple
+benchmarks.
             </p>
         </div>
     </div>
@@ -107,7 +134,7 @@ Without bells and whistles, our proposed method significantly outperforms the pr
     <div class="h-100 row text-center justify-content-md-center">
         <div class="col">
             <!-- <img width="90%" src="https://imgur.com/D5wnC9d.jpg" alt="framework"> -->
-            <img width="90%" src="../assets/Overview.png" alt="framework">
+            <img width="90%" src="../assets/Overview_Explainability.png" alt="framework">
            
         </div>
     </div>
@@ -123,7 +150,7 @@ Without bells and whistles, our proposed method significantly outperforms the pr
     </div>
     <br>
     <center>
-        <img width="90%" src="https://i.imgur.com/2EXzxW7.gif" alt="visualization">
+        <img width="90%" src="../assets/demo.gif" alt="visualization">
         
         <!-- <iframe style="width:100%; aspect-ratio: 1.78;"
             src="https://www.youtube.com/embed/j88gG-foerw" 
@@ -135,192 +162,7 @@ Without bells and whistles, our proposed method significantly outperforms the pr
 
     <br><br>
 
-    <div class="row" style="font-size:32px">
-        <div class="col">
-        Quantitative Results
-        </div>
-    </div>
-    <!DOCTYPE html>
-<html>
-<head>
-	<title>Quantitative Resultsr</title> 
-	<style>
-		table {
-			border:1px solid #b3adad;
-			border-collapse:collapse;
-			padding:5px;
-		}
-		table th {
-			border:1px solid #b3adad;
-			padding:5px;
-			background: #f0f0f0;
-			color: #313030;
-		}
-		table td {
-			border:1px solid #b3adad;
-			text-align:center;
-			padding:5px;
-			background: #ffffff;
-			color: #313030;
-		}
-	</style>
-</head>
-<body>
-	<table>
-		<thead>
-			<tr>
-				<th>Dataset</th>
-				<th>Split</th>
-				<th>IoU</th>
-				<th>Precision@0.5</th>
-				<th><span style="font-style: normal; font-weight: 700;">Precision@0.6</span><br></th>
-				<th><span style="font-style: normal; font-weight: 700;">Precision@0.7</span><br></th>
-				<th><span style="font-style: normal; font-weight: 700;">Precision@0.8</span><br></th>
-				<th><span style="font-style: normal; font-weight: 700;">Precision@0.9</span><br></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>RefCOCO&nbsp;</td>
-				<td>val&nbsp;</td>
-				<td>74.67&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>&nbsp;RefCOCO</td>
-				<td>&nbsp;testA</td>
-				<td>76.8&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>&nbsp;RefCOCO</td>
-				<td>&nbsp;testB</td>
-				<td>70.42&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>RefCOCO+&nbsp;</td>
-				<td>val&nbsp;</td>
-				<td>64.80&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</body>
-</html>
-
-    <!-- <div class="h-100 row text-center justify-content-md-center">
-        <div class="col">
-            <table>
-                <thead>
-                <tr>
-                    <th>Dataset</th>
-                    <th>Split</th>
-                    <th>IoU</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>RefCOCO</td>
-                    <td>val</td>
-                    <td>74.67</td>
-                </tr>
-                <tr>
-                    <td>RefCOCO</td>
-                    <td>testA</td>
-                    <td>76.8</td>
-                </tr>
-                <tr>
-                    <td>RefCOCO</td>
-                    <td>testB</td>
-                    <td>70.42</td>
-                </tr>
-                <tr>
-                    <td>RefCOCO+</td>
-                    <td>val</td>
-                    <td>64.80</td>
-                </tr>
-                <tr>
-                    <td>RefCOCO+</td>
-                    <td>testA</td>
-                    <td>70.33</td>
-                </tr>
-                <tr>
-                    <td>RefCOCO+</td>
-                    <td>testB</td>
-                    <td>56.33</td>
-                </tr>
-                <tr>
-                    <td>G-Ref</td>
-                    <td>val</td>
-                    <td>66.77</td>
-                </tr>
-                <tr>
-                    <td>G-Ref</td>
-                    <td>test</td>
-                    <td>66.52</td>
-                </tr>
-                </tbody>
-                </table>
-            </div>
-        </div>
-    <br>
-    <hr>
-    <br> -->
-
-    <!-- <div class="row" style="font-size:32px">
-        <div class="col">
-        Presentation
-        </div>
-    </div>
-    <br>
-    <center>
-        <iframe style="width:100%; aspect-ratio: 1.78;"
-            src="https://www.youtube.com/embed/lN--up3FYzU" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </center>
-
-    <br>
-    <hr>
-    <br> -->
-
-    <div class="row" style="font-size:32px">
-        <div class="col">
-        Qualitative Results
-        </div>
-    </div>
-    <br>
-    <center>
-        <img width="90%" src="https://imgur.com/RZALMP6.jpg" alt="visualization">
-        
-        <!-- <iframe style="width:100%; aspect-ratio: 1.78;"
-            src="https://www.youtube.com/embed/j88gG-foerw" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe> -->
-    </center>
-
-    <br><br>
+    <!-- <!DOCTYPE html> -->
 
     <div style="font-size: 14px;">
         Contact: E-Ro Nguyen - nero@selab.hcmus.edu.vn
